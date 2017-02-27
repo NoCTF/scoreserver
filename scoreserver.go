@@ -1,3 +1,6 @@
+//go:generate gendb -d .
+//go:generate genmodel -d .
+
 package scoreserver
 
 import (
