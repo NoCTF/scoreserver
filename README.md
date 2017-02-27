@@ -16,3 +16,14 @@ Configfile Options overrides the value of CommandLine Options.
 |:-----|:------------|
 | port | listen port of this application. |
 | database.DSN | data source name for mysql database driver. default value is "root@tcp(localhost:3306)/noctf?parseTime=true". |
+
+## Generation
+
+some model and db scripts are auto-generated.
+to generate, run below
+
+``` shell
+$ go build internal/genmodel/*.go
+$ go build internal/gendb/*.go
+$ PATH=.:${PATH} go generate .
+```
